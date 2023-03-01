@@ -2,8 +2,7 @@
 
 CMD="docker compose \
   -p seeding-tutorial \
-  -f docker/mysql/docker-compose.yml \
-  -f docker/api/docker-compose.yml"
+  -f docker-compose.yml"
 
 function build()
 {
@@ -31,4 +30,4 @@ function menu()
   done
 }
 
-menu "all" ".env"
+menu "database" ".env"

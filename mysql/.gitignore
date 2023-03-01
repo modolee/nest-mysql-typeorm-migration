@@ -1,0 +1,6 @@
+### Enviroment File
+.env*
+!.env.example
+
+### Docker data volume
+/data/*

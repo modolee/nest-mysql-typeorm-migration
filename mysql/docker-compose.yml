@@ -4,7 +4,6 @@ services:
     image: mysql:8.0
     container_name: 'seeding-tutorial-database'
     profiles:
-      - all
       - database
     command: --default-authentication-plugin=mysql_native_password
     environment:
@@ -14,7 +13,7 @@ services:
       - MYSQL_DATABASE=${DATABASE_DB}
       - MYSQL_INITDB_SKIP_TZINFO=true
     volumes:
-      - ../../data/mysql:/var/lib/mysql
+      - ./data:/var/lib/mysql
     ports:
-      - '${DATABASE_PORT}:${DATABASE_PORT}'
+      - '${DATABASE_PORT}:3306'
     restart: always
