@@ -7,4 +7,4 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 
-CMD ["yarn", "start:debug"]
+CMD ["npm", "run", "start:debug"]
